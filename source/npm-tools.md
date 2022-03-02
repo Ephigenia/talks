@@ -1,8 +1,7 @@
 ---
 marp: true
 theme: gaia
-paginate: true
-_header: 2022-03-02 // Ephigenia
+_header: 2022-03-02
 ---
 
 
@@ -207,5 +206,3 @@ Always check the packages in `package.json` files of projects that you’re usin
 <!-- _class: lead -->
 Thanks for listening!
 ![bg left 50%](assets/44500202.png)
-
-<!-- https://marpit.marp.app/image-syntax -->
