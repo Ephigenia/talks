@@ -1,0 +1,23 @@
+name: "build"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          check-latest: true
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # SEE: https://github.com/marketplace/actions/add-commit
+      - uses: EndBug/add-and-commit@v8
+        with:
+          add: 'source'

@@ -1,0 +1,28 @@
+{
+  "name": "talks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MARP",
+  "main": "index.js",
+  "scripts": {
+    "marp": "marp",
+    "build": "npm run build:html && npm run build:pdf",
+    "build:html": "marp ./source/*.md",
+    "build:pdf": "marp --pdf ./source/*.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ephigenia/talks.git"
+  },
+  "keywords": [],
+  "author": "Marcel Eichner <marcel.eichner@ephigenia.de> (https://www.marceleichner.de/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ephigenia/talks/issues"
+  },
+  "homepage": "https://github.com/Ephigenia/talks#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "1.7.0"
+  }
+}
