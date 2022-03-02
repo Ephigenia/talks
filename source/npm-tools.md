@@ -1,4 +1,8 @@
 ---
+title: NPM Tools
+description: A short introduction to a collection of useful node packages for everyday use.
+keywords: npm,tool,package,version
+author: Marcel Eichner
 marp: true
 theme: gaia
 _header: 2022-03-02
