@@ -8,8 +8,8 @@
     "marp": "marp",
     "watch": "npm run build:html -- --watch",
     "build": "npm run build:html && npm run build:pdf",
-    "build:html": "marp ./source/*.md",
-    "build:pdf": "marp --pdf ./source/*.md",
+    "build:html": "marp --allow-local-files ./source/*.md",
+    "build:pdf": "marp --allow-local-files --pdf ./source/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

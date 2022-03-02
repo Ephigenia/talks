@@ -49,7 +49,7 @@ nvm is a version manager for node.js
 ---
 ### git hooks?
 
-- Run one or more custom script(s) each time an [action](https://githooks.com/) occurs
+- Run custom script(s) every time an [action](https://githooks.com/) occurs (f.e. "commit", "push")
 - use cases:
     - lint file(s)
     - auto-format file(s)
@@ -107,8 +107,18 @@ git commit --no-verify -m "chore: my message"
 
 "Check for outdated, incorrect, and unused dependencies." - Interactive way of updating npm packages
 
+
+---
+### Why?
+
+- get an overview of the up-to-date "state" of dependencies
+- visually appealing, simple way of updating multiple packages
+- see different types of updates: patch, minor, major
+- find extranous packages
+- find missing packages
+- 
 ----
-![bg LEFT:70%](https://cloud.githubusercontent.com/assets/51505/9569912/8c600cd8-4f48-11e5-8757-9387a7a21316.gif)
+![bg h:90%](https://cloud.githubusercontent.com/assets/51505/9569912/8c600cd8-4f48-11e5-8757-9387a7a21316.gif)
 
 
 
@@ -175,7 +185,7 @@ Collection of different glob-patterns & filters to remove files from node_module
 "Easily find and remove old and heavy node_modules folders ✨"
 
 ---
-![bg fit](https://camo.githubusercontent.com/fa9316e334b14a26e8c8f5b7777e70cca137a6f21b5e160c2b4df9fcdd730308/68747470733a2f2f6e706b696c6c2e6a732e6f72672f696d672f6e706b696c6c2d64656d6f2d302e332e302e676966)
+![bg h:78%](https://camo.githubusercontent.com/fa9316e334b14a26e8c8f5b7777e70cca137a6f21b5e160c2b4df9fcdd730308/68747470733a2f2f6e706b696c6c2e6a732e6f72672f696d672f6e706b696c6c2d64656d6f2d302e332e302e676966)
 
 
 
@@ -204,9 +214,14 @@ Collection of different glob-patterns & filters to remove files from node_module
 <!-- _class: invert lead -->
 # Others?
 
-Always check the packages in `package.json` files of projects that you’re using to find new inspiring helpful tools.
+- check packages in `package.json` files of projects that you’re using to find new inspiring helpful tools.
+- check github explore: https://github.com/topics/javascript
+- check [node weekly](https://nodeweekly.com/) newsletter
+
+
+
 
 ---
 <!-- _class: lead -->
 Thanks for listening!
-![bg left 50%](assets/44500202.png)
+![bg left 50%](./assets/44500202.png)
