@@ -42,7 +42,7 @@ nvm is a version manager for node.js
 
 ----
 <!-- _class: invert lead -->
-## _ [husky](https://www.npmjs.com/package/husky)
+## 🐕 [husky](https://www.npmjs.com/package/husky)
 
 "modern native git hooks made easy" – Easily setup local git commit hooks for the whole team.
 
