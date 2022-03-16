@@ -4,16 +4,16 @@ description: A short introduction to a collection of useful node packages for ev
 keywords: npm,tool,package,version
 author: Marcel Eichner
 marp: true
-theme: gaia
-_header: 2022-03-14
+theme: egoditor
+_header: 2022-03-16
 ---
 
 
 
-<!-- _class: invert lead -->
+<!-- _class: lead -->
 # 🧰 NPM Tools
 
-A short introduction to a collection of useful node packages for everyday use.
+## A short introduction to a collection of useful node packages for everyday use.
 
 
 
@@ -236,6 +236,6 @@ Collection of different glob-patterns & filters to remove files from node_module
 
 
 ---
-<!-- _class: lead -->
-Thanks for listening!
+<!-- _class: three -->
+# Thanks for listening!
 ![bg left 50%](./assets/44500202.png)

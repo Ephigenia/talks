@@ -7,9 +7,11 @@
   "scripts": {
     "marp": "marp",
     "watch": "npm run build:html -- --watch",
+    "preview": "marp --theme-set ./source/theme --allow-local-files ./source/*.md --preview",
+    "serve": "marp --theme-set ./source/theme --allow-local-files ./source --server",
     "build": "npm run build:html && npm run build:pdf",
-    "build:html": "marp --allow-local-files ./source/*.md",
-    "build:pdf": "marp --allow-local-files --pdf ./source/*.md",
+    "build:html": "marp --theme-set ./source/theme --allow-local-files ./source/*.md",
+    "build:pdf": "marp --theme-set ./source/theme --allow-local-files --pdf ./source/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
