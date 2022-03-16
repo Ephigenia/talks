@@ -6,6 +6,7 @@
 
 a {
   color: #1E94F3;
+  text-decoration: underline;
 }
 
 h1 {
@@ -32,6 +33,9 @@ section {
   color: #1B294B;
   background: #fff;
 }
+section header, section footer {
+  font-size: 0.5em;
+}
 
 
 section.lead {
@@ -41,7 +45,6 @@ section.lead {
 section.lead header,
 section.lead footer {
   color: #fff;
-  font-size: 0.5em;
 }
 section.lead h1,
 section.lead h1 a {
@@ -70,7 +73,6 @@ section.invert {
 section.invert header,
 section.invert footer {
   color: #fff;
-  font-size: 0.5em;
 }
 section.invert h1,
 section.invert h1 a,

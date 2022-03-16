@@ -6,6 +6,7 @@ author: Marcel Eichner
 marp: true
 theme: egoditor
 _header: 2022-03-16
+_footer: http://www.marceleichner.de
 ---
 
 
