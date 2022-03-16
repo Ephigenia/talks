@@ -36,14 +36,19 @@ section {
 section header, section footer {
   font-size: 0.5em;
 }
-
+section footer {
+  text-align: right;
+  right: 2em;
+}
 
 section.lead {
   background: #00bfff;
   color: #fff;
 }
 section.lead header,
-section.lead footer {
+section.lead header a,
+section.lead footer,
+section.lead footer a {
   color: #fff;
 }
 section.lead h1,
