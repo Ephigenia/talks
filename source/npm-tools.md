@@ -5,7 +5,7 @@ keywords: npm,tool,package,version
 author: Marcel Eichner
 marp: true
 theme: gaia
-_header: 2022-03-02
+_header: 2022-03-14
 ---
 
 
@@ -116,10 +116,24 @@ git commit --no-verify -m "chore: my message"
 - see different types of updates: patch, minor, major
 - find extranous packages
 - find missing packages
-- 
+
 ----
 ![bg h:90%](https://cloud.githubusercontent.com/assets/51505/9569912/8c600cd8-4f48-11e5-8757-9387a7a21316.gif)
 
+
+---
+<!-- _class: invert lead -->
+## ↗️  [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+
+"upgrades your package.json dependencies to the latest versions" - ignoring specified versions
+
+---
+### Non-interactive - but more features!
+
+![bg right height:40%](https://github.com/raineorshine/npm-check-updates/raw/main/.github/screenshot.png?raw=true)
+
+- ignore major (breaking) and minor updates: `npx npm-check-update --target minor`
+- run tests while updating `npx npm-check-update --doctor`
 
 
 
