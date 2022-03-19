@@ -239,4 +239,4 @@ Collection of different glob-patterns & filters to remove files from node_module
 ---
 <!-- _class: three -->
 # Thanks for listening!
-![bg left 50%](./assets/44500202.png)
+![bg left 50%](./assets/ephigenia.de.png)
