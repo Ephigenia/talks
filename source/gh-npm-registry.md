@@ -12,75 +12,71 @@ _footer: http://www.marceleichner.de
 <!-- _class: lead -->
 # GitHub NPM Registry
 
-## how to use github as package registry for your private packages
-
-https://cli.github.com/
+## Use GitHub as package registry for your private packages
 
 ---
-<!-- _class: invert lead -->
-# Prequisities
+<!-- _class: lead invert -->
+# Scopes
 
-- `GITHUB_TOKEN` can be used to write to registry
-- accessing the github npm registry requires a personal access token with "read:packages" permissions ([Manage Personal Access Tokens](https://github.com/settings/tokens))
+- Some package names also have a scope
+- A scope follows the usual rules for package names. When used in package names, scopes are preceded by an "@" symbol and followed by a slash, e.g.
+
+```
+@scopename/somepackagename
+```
 
 ---
-<!-- _class: lead -->
-# Install Package
-How to use a private npm package form the github package registry
+<!-- _class: lead invert -->
+# Checklist
+
+- package name contains a scope which matches the GitHub organization / username name (lowercased)
+- npm config set GitHub registry URL for specific scope(s)
+- npm config to have NPM_TOKEN configured
 
 ---
-## NPM Configuration
-Tell package manager to load scoped packages from a different registry:
-`<project-id>/.npmrc`
-```
-@OWNER:registry=https://npm.pkg.github.com/
-```
+## Package Name
 
-If the package to be used is public you’re done!
+The package’s "scope" must match the organisation’s name for GitHub to ensure that the npm client has the permission to clone the package.
+
+`package.json`
+```json
+{
+    "name": "@egoditor/somepackagename"
+}
+```
 
 ---
-## Private Packages
+## Registry
 
-Private NPM Packages from the GitHub registry require a *personal access token* with `write:packages` and/or `read:packages` permission.
-
-### `~/.npmrc`
+Configure `npm` to use a different package registry URL for specific scope(s).
 
 ```
-//npm.pkg.github.com/:_authToken=<token-value>
+npm config set --@egoditor:registry --location project https://npm.pkg.github.com/scope
+```
+or
+```
+npm config set --@egoditor:registry https://npm.pkg.github.com/egoditor
 ```
 
-or 
+**IMPORTANT: repeat the scope at the end of the registry URL.**
+
+---
+## NPM Token
+
+Using private NPM Packages from GitHub registry require a *personal access token* with "write:packages" for publishing and/or "read:packages" for pulling.
 
 ```bash
 npm config set //npm.pkg.github.com/:_authToken <token-value>
 ```
 
+Personal Access Tokens can be created in the GitHub Settings > "[Personal Access Tokens](https://github.com/settings/tokens)".
 
 ---
-<!-- _class: lead -->
-# Provide Package
----
-# Registry
+### GITHUB_TOKEN vs. NPM_TOKEN
 
-### `package.json`
-```json
-{
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    }
-}
-```
----
-# Package Scope
+The github workflow environment automatically creates a secret `GITHUB_TOKEN` which can be used to publish and clone private packages.
 
-The package’s scope must match the organisation’s name:
 
-### `package.json`
-```json
-{
-    "name": "@OWNER/lorem-ipsum"
-}
-```
 
 
 ---
@@ -89,7 +85,7 @@ The package’s scope must match the organisation’s name:
 ---
 ## npm link
 
-test new versions without publishing them
+Before publishing a version use the local copy of the package in your project by linking it:
 
 ```bash
 cd my-new-project
@@ -98,13 +94,19 @@ npm link ../../egoditor/my-funky-package
 
 
 ---
-<!-- _class: lead -->
-# Semantic Release
+# Troubleshooting
+
+> Unable to authenticate, need: Basic realm="GitHub Package Registry"
+
+You probably missed the "scope" at the end of the registry URL in the configuration.
+
 
 ---
 # Additional Resources
 
 - [GitHub Documentation](https://docs.github.com/es/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
+- [NPM config Documentation](https://docs.npmjs.com/cli/v7/commands/npm-config)
+
 
 ---
 <!-- _class: three -->

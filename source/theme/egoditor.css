@@ -88,6 +88,14 @@ section.invert h3 a {
   color: #FEE5F1;
 }
 
+section.invert blockquote, section.lead blockquote {
+  background: rgba(255,255,255,0.5);
+  color: #fff;
+}
+section.invert blockquote *, section.lead blockquote * {
+  text-align: left;
+}
+
 section.one {
   background: #D6FAF9;
 }
