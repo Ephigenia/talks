@@ -36,7 +36,7 @@ _footer: http://www.marceleichner.de
 ---
 ## Package Name
 
-The package’s "scope" must match the organisation’s name for GitHub to ensure that the npm client has the permission to clone the package.
+The package’s "scope" must match the lowercased organisation’s name.
 
 `package.json`
 ```json
@@ -45,28 +45,34 @@ The package’s "scope" must match the organisation’s name for GitHub to ensur
 }
 ```
 
+Name is lowercased cause naming convention doesn’t allow uppercase letters.
+
 ---
 ## Registry
 
-Configure `npm` to use a different package registry URL for specific scope(s).
+Configure `npm` to use a different package registry URL for specific scope(s). Note that the Organisation’s name must exact match here. **Do not lowercase!**
 
 ```
-npm config set --@egoditor:registry --location project https://npm.pkg.github.com/scope
+npm config set --@Egoditor:registry --location project https://npm.pkg.github.com/
 ```
 or
 ```
-npm config set --@egoditor:registry https://npm.pkg.github.com/egoditor
+npm config set --@Egoditor:registry https://npm.pkg.github.com/
 ```
-
-**IMPORTANT: repeat the scope at the end of the registry URL.**
 
 ---
 ## NPM Token
 
-Using private NPM Packages from GitHub registry require a *personal access token* with "write:packages" for publishing and/or "read:packages" for pulling.
+Using private NPM Packages from GitHub registry require a *personal access token* (PAT) with "write:packages" for publishing and/or "read:packages" for pulling.
 
 ```bash
 npm config set //npm.pkg.github.com/:_authToken <token-value>
+```
+
+or login
+
+```bash
+npm login --scope=@Egoditor --registry=https://npm.pkg.github.com
 ```
 
 Personal Access Tokens can be created in the GitHub Settings > "[Personal Access Tokens](https://github.com/settings/tokens)".
@@ -92,13 +98,16 @@ cd my-new-project
 npm link ../../egoditor/my-funky-package
 ```
 
-
 ---
 # Troubleshooting
 
-> Unable to authenticate, need: Basic realm="GitHub Package Registry"
+> npm ERR! Unable to authenticate, need: Basic realm="GitHub Package Registry"
 
-You probably missed the "scope" at the end of the registry URL in the configuration.
+The NPM Token is not valid, doesn’t have the correct permissions. Double check the value.
+
+> npm ERR! 404 Not Found - GET https://npm.pkg.github.com/download/@egoditor...
+
+Authentification worked well but the package could not be found as the scope is not correct. Correct would be with uppercase "e".
 
 
 ---
