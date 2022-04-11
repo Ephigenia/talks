@@ -39,27 +39,30 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="egoditor" style="--theme:egoditor;">
 <h2>Package Name</h2>
-<p>The package’s &quot;scope&quot; must match the organisation’s name for GitHub to ensure that the npm client has the permission to clone the package.</p>
+<p>The package’s &quot;scope&quot; must match the lowercased organisation’s name.</p>
 <p><code>package.json</code></p>
 <pre><code class="language-json"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>{
     <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;@egoditor/somepackagename&quot;</span>
 }
 </span></span></foreignObject></svg></code></pre>
+<p>Name is lowercased cause naming convention doesn’t allow uppercase letters.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="egoditor" style="--theme:egoditor;">
 <h2>Registry</h2>
-<p>Configure <code>npm</code> to use a different package registry URL for specific scope(s).</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm config set --@egoditor:registry --location project https://npm.pkg.github.com/scope
+<p>Configure <code>npm</code> to use a different package registry URL for specific scope(s). Note that the Organisation’s name must exact match here. <strong>Do not lowercase!</strong></p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm config set --@Egoditor:registry --location project https://npm.pkg.github.com/
 </span></span></foreignObject></svg></code></pre>
 <p>or</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm config set --@egoditor:registry https://npm.pkg.github.com/egoditor
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm config set --@Egoditor:registry https://npm.pkg.github.com/
 </span></span></foreignObject></svg></code></pre>
-<p><strong>IMPORTANT: repeat the scope at the end of the registry URL.</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="egoditor" style="--theme:egoditor;">
 <h2>NPM Token</h2>
-<p>Using private NPM Packages from GitHub registry require a <em>personal access token</em> with &quot;write:packages&quot; for publishing and/or &quot;read:packages&quot; for pulling.</p>
+<p>Using private NPM Packages from GitHub registry require a <em>personal access token</em> (PAT) with &quot;write:packages&quot; for publishing and/or &quot;read:packages&quot; for pulling.</p>
 <pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm config <span class="hljs-built_in">set</span> //npm.pkg.github.com/:_authToken &lt;token-value&gt;
+</span></span></foreignObject></svg></code></pre>
+<p>or login</p>
+<pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm login --scope=@Egoditor --registry=https://npm.pkg.github.com
 </span></span></foreignObject></svg></code></pre>
 <p>Personal Access Tokens can be created in the GitHub Settings &gt; &quot;<a href="https://github.com/settings/tokens">Personal Access Tokens</a>&quot;.</p>
 </section>
@@ -80,9 +83,13 @@ npm link ../../egoditor/my-funky-package
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="egoditor" style="--theme:egoditor;">
 <h1>Troubleshooting</h1>
 <blockquote>
-<p>Unable to authenticate, need: Basic realm=&quot;GitHub Package Registry&quot;</p>
+<p>npm ERR! Unable to authenticate, need: Basic realm=&quot;GitHub Package Registry&quot;</p>
 </blockquote>
-<p>You probably missed the &quot;scope&quot; at the end of the registry URL in the configuration.</p>
+<p>The NPM Token is not valid, doesn’t have the correct permissions. Double check the value.</p>
+<blockquote>
+<p>npm ERR! 404 Not Found - GET <a href="https://npm.pkg.github.com/download/@egoditor">https://npm.pkg.github.com/download/@egoditor</a>...</p>
+</blockquote>
+<p>Authentification worked well but the package could not be found as the scope is not correct. Correct would be with uppercase &quot;e&quot;.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="egoditor" style="--theme:egoditor;">
 <h1>Additional Resources</h1>
