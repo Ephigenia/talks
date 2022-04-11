@@ -12,7 +12,7 @@ _footer: http://www.marceleichner.de
 <!-- _class: lead -->
 # GitHub NPM Registry
 
-## GitHub’s official command line tool
+## how to use github as package registry for your private packages
 
 https://cli.github.com/
 
@@ -20,8 +20,8 @@ https://cli.github.com/
 <!-- _class: invert lead -->
 # Prequisities
 
-- GITHUB_TOKEN can be used to write to registry
-- accessing the github npm registry requires a personal access token with "read" permissions
+- `GITHUB_TOKEN` can be used to write to registry
+- accessing the github npm registry requires a personal access token with "read:packages" permissions ([Manage Personal Access Tokens](https://github.com/settings/tokens))
 
 ---
 <!-- _class: lead -->
@@ -41,7 +41,7 @@ If the package to be used is public you’re done!
 ---
 ## Private Packages
 
-Private NPM Packages from the GitHub registry require a *personal access token*:
+Private NPM Packages from the GitHub registry require a *personal access token* with `write:packages` and/or `read:packages` permission.
 
 ### `~/.npmrc`
 
