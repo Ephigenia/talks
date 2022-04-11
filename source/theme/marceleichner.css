@@ -4,8 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
 
+kbd {
+    font-size: 0.75em;
+    line-height: 1em;
+    height: 1em;
+}
+
 a {
-    color: #fff;
+    color: #000;
     text-decoration: underline;
 }
 /** general typography **/
@@ -57,10 +63,14 @@ section.lead p {
   text-align: center;
 }
 
+section.invert, section.invert a {
+    color: #fff;
+    text-decoration: underline;
+}
 section.invert {
     background: #000;
-    color: #fff;
 }
 section.invert h1, section.invert a {
     color: #00833d;
+    text-decoration: underline;
 }

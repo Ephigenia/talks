@@ -5,13 +5,13 @@
   "description": "MARP",
   "main": "index.js",
   "scripts": {
-    "marp": "marp",
+    "marp": "marp --html --theme-set ./source/theme --allow-local-files ",
     "watch": "npm run build:html -- --watch",
-    "preview": "marp --theme-set ./source/theme --allow-local-files ./source/*.md --preview",
-    "serve": "marp --theme-set ./source/theme --allow-local-files ./source --server",
+    "preview": "npm run marp -- ./source/*.md --preview",
+    "serve": "npm run marp -- ./source --server",
     "build": "npm run build:html && npm run build:pdf",
-    "build:html": "marp --theme-set ./source/theme --allow-local-files ./source/*.md",
-    "build:pdf": "marp --theme-set ./source/theme --allow-local-files --pdf ./source/*.md",
+    "build:html": "npm run marp -- ./source/*.md",
+    "build:pdf": "npm run marp -- --pdf ./source/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
