@@ -17,15 +17,15 @@
 <header>2022-04-08</header>
 
 <h1>GitHub NPM Registry</h1>
-<h2>GitHub’s official command line tool</h2>
+<h2>how to use github as package registry for your private packages</h2>
 <p><a href="https://cli.github.com/">https://cli.github.com/</a></p>
 <footer><a href="http://www.marceleichner.de">http://www.marceleichner.de</a></footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert lead" data-theme="egoditor" class="invert lead" style="--class:invert lead;--theme:egoditor;">
 <h1>Prequisities</h1>
 <ul>
-<li>GITHUB_TOKEN can be used to write to registry</li>
-<li>accessing the github npm registry requires a personal access token with &quot;read&quot; permissions</li>
+<li><code>GITHUB_TOKEN</code> can be used to write to registry</li>
+<li>accessing the github npm registry requires a personal access token with &quot;read:packages&quot; permissions (<a href="https://github.com/settings/tokens">Manage Personal Access Tokens</a>)</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="lead" data-theme="egoditor" class="lead" style="--class:lead;--theme:egoditor;">
@@ -42,7 +42,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="egoditor" style="--theme:egoditor;">
 <h2>Private Packages</h2>
-<p>Private NPM Packages from the GitHub registry require a <em>personal access token</em>:</p>
+<p>Private NPM Packages from the GitHub registry require a <em>personal access token</em> with <code>write:packages</code> and/or <code>read:packages</code> permission.</p>
 <h3><code>~/.npmrc</code></h3>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>//npm.pkg.github.com/:_authToken=&lt;token-value&gt;
 </span></span></foreignObject></svg></code></pre>
