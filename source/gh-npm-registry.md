@@ -103,47 +103,6 @@ npm install --save @egoditor/my-package@1.0.0
 - check project’s and user’s `.npmrc` file for scope "@egoditor"
 - uses `NPM_TOKEN` configured for the registry to authorize against the registry
 
-
----
-<!-- _class: lead -->
-# GitHub Actions (CI)
-
-- Installing or publishing a private package in GitHub package registry is very easy when following the rules.
-- Access to the package is handled by github and the repository and organisation user permissions.
-
----
-## GITHUB_TOKEN
-
-The github workflow environment automatically creates a secret `GITHUB_TOKEN` which can be used to do different things.
-
----
-## Permissions
-![bg right](assets/gh-npm-registry/GITHUB_TOKEN.png)
-
-Defined by:
-- workflow settings
-- type of repository (fork or source)
-- settings in workflow.yml
-
-[read more …](https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp)
-
----
-## Example Workflow
-
-```yaml
-// .github/workflows/example.yml
-env:
-  NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - name: setup nodejs
-        uses: actions/setup-node@v3
-      - name: install dependencies
-        run: npm ci
-```
-
 ---
 <!-- _class: lead -->
 # Install Local Package
@@ -166,6 +125,71 @@ npm link ../../egoditor/my-funky-package
 - easy to setup with semantic-release package
 
 *… will be covered in another talk*
+
+
+---
+<!-- _class: lead -->
+# GitHub Actions (CI)
+
+- Installing or publishing a private package in GitHub package registry is very easy when following the rules.
+- Access to the package is handled by github and the repository and organisation user permissions.
+
+---
+## Publishing
+
+Publishing can be done using the `GITHUB_TOKEN` which is automatically created on each CI run and has access to the same repository.
+
+---
+## Permissions
+![bg right](assets/gh-npm-registry/GITHUB_TOKEN.png)
+
+Do things with the same repository.
+
+Defined by:
+- workflow settings
+- type of repository (fork or source)
+- settings in workflow.yml
+
+**CAUTION: NO ACCESS to other repositories / packages**
+
+---
+## Example Workflow (Publishing)
+
+```yaml
+// .github/workflows/release.yml
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+      - run: npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+---
+## Installing in CI
+
+As the `GITHUB_TOKEN` doesn’t have access to other repositories the only known workaround to install packages from private registry is to use another PAT with `packages:read` permission.
+
+---
+## Example Workflow (Publishing)
+
+```yaml
+// .github/workflows/main.yml
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://npm.pkg.github.com/'
+      - name: install dependencies
+        run: npm ci
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_READ_TOKEN }}
+```
+
 
 ---
 # Troubleshooting

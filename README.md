@@ -4,6 +4,8 @@ Collection of talks & presentations.
 
 ## 2022
 
+- [GitHub private npm registry](./source/gh-npm-registry.md)
+     Introduction and how-to use description of GitHub’s easy-to-use private package registry
 - [npm-tools](source/npm-tools.md)  
      A short introduction to a collection of useful node packages for everyday use
 
