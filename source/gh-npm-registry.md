@@ -129,9 +129,10 @@ npm link ../../egoditor/my-funky-package
 
 ---
 <!-- _class: lead -->
-# GitHub Actions (CI)
+# The Hard-Part GitHub Actions
 
-- Installing or publishing a private package in GitHub package registry is very easy when following the rules.
+- Publishing a package is easy when rules are followed
+- Installing a package is harder
 - Access to the package is handled by github and the repository and organisation user permissions.
 
 ---
@@ -170,7 +171,9 @@ jobs:
 ---
 ## Installing in CI
 
-As the `GITHUB_TOKEN` doesn’t have access to other repositories the only known workaround to install packages from private registry is to use another PAT with `packages:read` permission.
+- **`GITHUB_TOKEN` doesn’t have access to other repos or packages**
+- create personal access token (PAT) with `read:packages` permissions
+- create repo or organisation secret (f.e. `NPM_READ_TOKEN`)
 
 ---
 ## Example Workflow (Publishing)
@@ -196,7 +199,7 @@ jobs:
 
 > npm ERR! Unable to authenticate, need: Basic realm="GitHub Package Registry"
 
-The NPM Token is not valid, doesn’t have the correct permissions. Double check the value.
+The NPM_AUTH_TOKEN Token is not valid, doesn’t have the correct permissions. Double check the value.
 
 > npm ERR! 404 Not Found - GET https://npm.pkg.github.com/download/@egoditor...
 
