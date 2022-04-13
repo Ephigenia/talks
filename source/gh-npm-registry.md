@@ -88,7 +88,7 @@ npm login --scope=@Egoditor --registry=https://npm.pkg.github.com
 
 (alternative) environment variable
 ```
-NPM_TOKEN=value npm install
+NPM_TOKEN=token-value npm install
 ```
 
 Personal Access Tokens can be created in the GitHub Settings > "[Personal Access Tokens](https://github.com/settings/tokens)".
@@ -124,7 +124,25 @@ Defined by:
 - workflow settings
 - type of repository (fork or source)
 - settings in workflow.yml
-- [more](https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp)
+
+[read more …](https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp)
+
+---
+## Example Workflow
+
+```yaml
+// .github/workflows/example.yml
+env:
+  NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup nodejs
+        uses: actions/setup-node@v3
+      - name: install dependencies
+        run: npm ci
+```
 
 ---
 <!-- _class: lead -->
