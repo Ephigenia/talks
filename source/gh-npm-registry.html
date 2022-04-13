@@ -109,9 +109,10 @@ npm link ../../egoditor/my-funky-package
 <p><em>… will be covered in another talk</em></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="lead" data-theme="egoditor" class="lead" style="--class:lead;--theme:egoditor;">
-<h1>GitHub Actions (CI)</h1>
+<h1>The Hard-Part GitHub Actions</h1>
 <ul>
-<li>Installing or publishing a private package in GitHub package registry is very easy when following the rules.</li>
+<li>Publishing a package is easy when rules are followed</li>
+<li>Installing a package is harder</li>
 <li>Access to the package is handled by github and the repository and organisation user permissions.</li>
 </ul>
 </section>
@@ -146,7 +147,11 @@ npm link ../../egoditor/my-funky-package
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="egoditor" style="--theme:egoditor;">
 <h2>Installing in CI</h2>
-<p>As the <code>GITHUB_TOKEN</code> doesn’t have access to other repositories the only known workaround to install packages from private registry is to use another PAT with <code>packages:read</code> permission.</p>
+<ul>
+<li><strong><code>GITHUB_TOKEN</code> doesn’t have access to other repos or packages</strong></li>
+<li>create personal access token (PAT) with <code>read:packages</code> permissions</li>
+<li>create repo or organisation secret (f.e. <code>NPM_READ_TOKEN</code>)</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="egoditor" style="--theme:egoditor;">
 <h2>Example Workflow (Publishing)</h2>
@@ -169,7 +174,7 @@ npm link ../../egoditor/my-funky-package
 <blockquote>
 <p>npm ERR! Unable to authenticate, need: Basic realm=&quot;GitHub Package Registry&quot;</p>
 </blockquote>
-<p>The NPM Token is not valid, doesn’t have the correct permissions. Double check the value.</p>
+<p>The NPM_AUTH_TOKEN Token is not valid, doesn’t have the correct permissions. Double check the value.</p>
 <blockquote>
 <p>npm ERR! 404 Not Found - GET <a href="https://npm.pkg.github.com/download/@egoditor">https://npm.pkg.github.com/download/@egoditor</a>...</p>
 </blockquote>
