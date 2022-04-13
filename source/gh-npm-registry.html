@@ -75,7 +75,7 @@
 <pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>npm login --scope=@Egoditor --registry=https://npm.pkg.github.com
 </span></span></foreignObject></svg></code></pre>
 <p>(alternative) environment variable</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>NPM_TOKEN=value npm install
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>NPM_TOKEN=token-value npm install
 </span></span></foreignObject></svg></code></pre>
 <p>Personal Access Tokens can be created in the GitHub Settings &gt; &quot;<a href="https://github.com/settings/tokens">Personal Access Tokens</a>&quot;.</p>
 </section>
@@ -107,20 +107,35 @@
 <li>workflow settings</li>
 <li>type of repository (fork or source)</li>
 <li>settings in workflow.yml</li>
-<li><a href="https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp">more</a></li>
 </ul>
+<p><a href="https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp">read more …</a></p>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="lead" data-theme="egoditor" class="lead" style="--class:lead;--theme:egoditor;">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="egoditor" style="--theme:egoditor;">
+<h2>Example Workflow</h2>
+<pre><code class="language-yaml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-string">//</span> <span class="hljs-string">.github/workflows/example.yml</span>
+<span class="hljs-attr">env:</span>
+  <span class="hljs-attr">NPM_AUTH_TOKEN:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">}}</span>
+<span class="hljs-attr">jobs:</span>
+  <span class="hljs-attr">ci:</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">setup</span> <span class="hljs-string">nodejs</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">install</span> <span class="hljs-string">dependencies</span>
+        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">ci</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="lead" data-theme="egoditor" class="lead" style="--class:lead;--theme:egoditor;">
 <h1>Install Local Package</h1>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="egoditor" style="--theme:egoditor;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="egoditor" style="--theme:egoditor;">
 <h2>npm link</h2>
 <p>Before publishing a version use the local copy of the package in your project by linking it:</p>
 <pre><code class="language-bash"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">cd</span> my-new-project
 npm link ../../egoditor/my-funky-package
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-theme="egoditor" style="--theme:egoditor;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="egoditor" style="--theme:egoditor;">
 <h1>Publishing Packages</h1>
 <ul>
 <li>configure <code>package.json</code> &quot;files&quot; or <code>.npmignore</code> to publish only required files</li>
@@ -130,7 +145,7 @@ npm link ../../egoditor/my-funky-package
 </ul>
 <p><em>… will be covered in another talk</em></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="egoditor" style="--theme:egoditor;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="egoditor" style="--theme:egoditor;">
 <h1>Troubleshooting</h1>
 <blockquote>
 <p>npm ERR! Unable to authenticate, need: Basic realm=&quot;GitHub Package Registry&quot;</p>
@@ -141,7 +156,7 @@ npm link ../../egoditor/my-funky-package
 </blockquote>
 <p>Authentification worked well but the package could not be found as the scope is not correct. Correct would be with uppercase &quot;e&quot;.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-theme="egoditor" style="--theme:egoditor;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="egoditor" style="--theme:egoditor;">
 <h1>Additional Resources</h1>
 <ul>
 <li><a href="https://docs.github.com/es/packages/working-with-a-github-packages-registry/working-with-the-npm-registry">GitHub Documentation</a></li>
@@ -149,7 +164,7 @@ npm link ../../egoditor/my-funky-package
 <li><a href="https://dev.to/github/the-githubtoken-in-github-actions-how-it-works-change-permissions-customizations-3cgp">GITHUB_TOKEN: How it Works, Change Permissions, Customizations</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="three" data-theme="egoditor" class="three" style="--class:three;--theme:egoditor;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ephigenia.de.png&quot;);background-size:50%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="17" data-class="three" data-theme="egoditor" class="three" style="--class:three;--theme:egoditor;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="three" data-theme="egoditor" class="three" style="--class:three;--theme:egoditor;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ephigenia.de.png&quot;);background-size:50%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="18" data-class="three" data-theme="egoditor" class="three" style="--class:three;--theme:egoditor;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
 <h1>Thanks for listening!</h1>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
