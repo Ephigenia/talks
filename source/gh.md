@@ -20,6 +20,10 @@ https://cli.github.com/
 <!-- _class: invert lead -->
 # Pull-Requests
 
+```
+gh pr checkout <number>
+```
+
 ---
 <!-- _class: invert lead -->
 # Issues

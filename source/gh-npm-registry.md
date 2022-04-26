@@ -5,7 +5,7 @@ keywords: npm,tool,package,version,package,registry
 author: Marcel Eichner
 marp: true
 theme: egoditor
-_header: 2022-04-08
+_header: 2022-04-26
 _footer: http://www.marceleichner.de
 ---
 
@@ -26,9 +26,9 @@ _footer: http://www.marceleichner.de
 <!-- _class: lead invert -->
 # Scopes
 
-- Some package names also have a scope
-- A scope follows the usual rules for package names. When used in package names, scopes are preceded by an "@" symbol and followed by a slash, e.g.
+- Some package names also have a scope (thing Angular, React, Jest etc.)
 - Scopes are usually used company-wide
+- A scope follows the usual rules for package names. When used in package names, scopes are preceded by an "@" symbol and followed by a slash, e.g.
 
 ```
 @scopename/somepackagename
@@ -47,27 +47,25 @@ _footer: http://www.marceleichner.de
 
 The package’s "scope" must match the organisation’s name:
 
-`package.json`
 ```json
 {
     "name": "@egoditor/somepackagename"
 }
 ```
 
-Name is lowercased cause naming convention doesn’t allow uppercase letters.
+Name transformed according to [package.json schema definitions](https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/package.json#L168).
 
 ---
 ## Registry
 
-Configure `npm` to use a different package registry URL for specific scope(s).
-*Note that the Organisation’s name must exact match here*. **Do not lowercase!**
+Configure `npm` to use a different package registry URL for specific scope(s) for the current project:
+```
+npm config set --@egoditor:registry --location project https://npm.pkg.github.com/
+```
 
+or for all projects in the user directory:
 ```
-npm config set --@Egoditor:registry --location project https://npm.pkg.github.com/
-```
-or for all projects
-```
-npm config set --@Egoditor:registry https://npm.pkg.github.com/
+npm config set --@egoditor:registry https://npm.pkg.github.com/
 ```
 
 
@@ -83,7 +81,7 @@ npm config set //npm.pkg.github.com/:_authToken <token-value>
 (alternative) interactively login
 
 ```bash
-npm login --scope=@Egoditor --registry=https://npm.pkg.github.com
+npm login --scope=@egoditor --registry=https://npm.pkg.github.com
 ```
 
 (alternative) environment variable
@@ -100,8 +98,7 @@ Personal Access Tokens can be created in the GitHub Settings > "[Personal Access
 npm install --save @egoditor/my-package@1.0.0
 ```
 
-- check project’s and user’s `.npmrc` file for scope "@egoditor"
-- uses `NPM_TOKEN` configured for the registry to authorize against the registry
+NPM checks the project and system users `.npmrc` files for registry definitions for the scope "egoditor". If there’s none it uses the default registry.
 
 ---
 <!-- _class: lead -->
