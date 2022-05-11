@@ -32,9 +32,8 @@ section h2 {
 }
 
 /** General colors **/
-
 section h1 {
-    color: #e2231a;
+    color: #000;
 }
 section header,
 section header a,
@@ -73,4 +72,20 @@ section.invert {
 section.invert h1, section.invert a {
     color: #00833d;
     text-decoration: underline;
+}
+
+section.chapter {
+    box-shadow: inset 0 0 0 0.25em  #00833d;
+}
+section.chapter h1 {
+    border-bottom: 0.25em solid #00833d;
+    color: #00833d;
+}
+section.chapter h1,
+section.chapter h2,
+section.chapter h3,
+section.chapter h4,
+section.chapter h5,
+section.chapter p {
+  text-align: center;
 }

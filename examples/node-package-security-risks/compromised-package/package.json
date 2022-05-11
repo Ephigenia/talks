@@ -1,0 +1,13 @@
+{
+  "name": "compromised-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "sh script.sh"
+  },
+  "keywords": [],
+  "author": "Marcel Eichner <marcel.eichner@ephigenia.de> (https://www.marceleichner.de/)",
+  "license": "ISC"
+}

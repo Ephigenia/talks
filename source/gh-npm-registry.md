@@ -171,6 +171,8 @@ jobs:
 - **`GITHUB_TOKEN` doesn’t have access to other repos or packages**
 - create personal access token (PAT) with `read:packages` permissions
 - create repo or organisation secret (f.e. `NPM_READ_TOKEN`)
+- set `NPM_AUTH_TOKEN`
+- set `registry-url`
 
 ---
 ## Example Workflow (Publishing)
