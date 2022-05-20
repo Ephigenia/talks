@@ -23,7 +23,7 @@ _footer: http://www.marceleichner.de
 - effortless: almost zero administration & maintenance of registry required
 
 ---
-<!-- _class: lead invert -->
+<!-- _class: chapter -->
 # Scopes
 
 - Some package names also have a scope (thing Angular, React, Jest etc.)
@@ -35,7 +35,7 @@ _footer: http://www.marceleichner.de
 ```
 
 ---
-<!-- _class: lead invert -->
+<!-- _class: chapter -->
 # Checklist
 
 - package name contains a scope which matches the GitHub organization / username name (lowercased)
@@ -101,7 +101,7 @@ npm install --save @egoditor/my-package@1.0.0
 NPM checks the project and system users `.npmrc` files for registry definitions for the scope "egoditor". If there’s none it uses the default registry.
 
 ---
-<!-- _class: lead -->
+<!-- _class: chapter -->
 # Install Local Package
 ---
 ## npm link
@@ -125,7 +125,7 @@ npm link ../../egoditor/my-funky-package
 
 
 ---
-<!-- _class: lead -->
+<!-- _class: chapter -->
 # The Hard-Part GitHub Actions
 
 - Publishing a package is easy when rules are followed

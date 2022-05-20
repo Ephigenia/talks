@@ -1,0 +1,103 @@
+/*!
+ * Marp / Marpit marceleichner theme.
+ *
+ * @theme marceleichner
+ * @author Marcel Eichner <love@ephigenia.de>
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+ @import-theme 'default';
+
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+ 
+ $primary: #e2231a;
+ $secondary: #00833d;
+ $black: #000;
+ $background: #fff;
+ 
+ section {
+     background: $background;
+     footer {
+         text-align: right;
+         right: 2em;
+     }
+     header {
+         text-align: left;
+         left: 2em;
+     }
+ }
+ 
+ /** general **/
+ kbd {
+     font-size: 0.75em;
+     line-height: 1em;
+     height: 1em;
+ }
+ 
+ a {
+     color: $black;
+     text-decoration: underline;
+ }
+ 
+ /** Typography **/
+ section {
+     p {
+         font-family: "Helvetica Neue", "Helvetica", "Arial";
+         font-weight: 400;
+     }
+     header, footer {
+         font-size: 0.5em;
+     }
+     h1 {
+         font-weight: 900;
+         font-size: 2.5em;
+     }
+     h2 {
+         font-size: 2em;
+     }
+ }
+ 
+ /** Colors **/
+ section {
+     h1 {
+         color: $black;
+     }
+     header, header a,
+     footer, footer a {
+         color: mix($background, $black);
+     }
+ }
+ 
+ section.lead {
+     box-shadow: inset 0 0 0 0.5rem $primary;
+     h1 {
+         border-bottom: 0.5rem solid$primary;
+         color: $primary;
+     }
+     h1, h2, h3, h4, h5, p {
+         text-align: center;
+     }
+ }
+ 
+ section.invert {
+     color: #fff;
+     background: invert($background);
+     header, header a, footer, footer a {
+         color: mix(invert($background), invert($black));
+     }
+     h1 {
+         color: $secondary;
+     }
+ }
+ 
+ section.chapter {
+     box-shadow: inset 0 0 0 0.25rem  $secondary;
+     h1 {
+         border-bottom: 0.25rem solid $secondary;
+         color: $secondary;
+     }
+     h1, h2, h3, h4, h5, p {
+         text-align: center;
+     }
+ }

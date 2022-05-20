@@ -8,13 +8,8 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
 @import-theme "default";
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-section header, section footer {
-  font-size: 0.5em;
+section {
+  background: #fff;
 }
 section footer {
   text-align: right;
@@ -32,13 +27,15 @@ kbd {
   height: 1em;
 }
 
-code {
-  font-family: "Menlo", "PT Mono", "Andale Mono", "Droid Sans Mono", "Consolas", "Courier New";
+a {
+  color: #000;
+  text-decoration: underline;
 }
 
 /** Typography **/
-section {
+section p {
   font-family: "Helvetica Neue", "Helvetica", "Arial";
+  font-weight: 400;
 }
 section header, section footer {
   font-size: 0.5em;
@@ -50,15 +47,13 @@ section h1 {
 section h2 {
   font-size: 2em;
 }
-section p {
-  font-weight: 400;
-}
 
-section {
+/** Colors **/
+section h1 {
   color: #000;
-  background: #fff;
 }
-section header, section footer {
+section header, section header a,
+section footer, section footer a {
   color: gray;
 }
 
@@ -67,9 +62,6 @@ section.lead {
 }
 section.lead h1 {
   border-bottom: 0.5rem solid #e2231a;
-}
-section.lead header, section.lead footer,
-section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
   color: #e2231a;
 }
 section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
@@ -80,7 +72,7 @@ section.invert {
   color: #fff;
   background: black;
 }
-section.invert header, section.invert footer {
+section.invert header, section.invert header a, section.invert footer, section.invert footer a {
   color: gray;
 }
 section.invert h1 {

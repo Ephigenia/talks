@@ -1,0 +1,29 @@
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+section {
+    header, footer {
+        font-size: 0.5em;
+    }
+    footer {
+        text-align: right;
+        right: 2em;
+    }
+    header {
+        text-align: left;
+        left: 2em;
+    }
+}
+
+/** general **/
+kbd {
+    font-size: 0.75em;
+    line-height: 1em;
+    height: 1em;
+}
+
+code {
+    font-family: "Menlo", "PT Mono", "Andale Mono", "Droid Sans Mono", "Consolas", "Courier New";
+}

@@ -1,38 +1,18 @@
-/* @theme egoditor */
-
-@import 'default';
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
-
+/*!
+ * Marp / Marpit Egoditor theme.
+ *
+ * @theme egoditor
+ * @author Marcel Eichner <love@ephigenia.de>
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+@import-theme "default";
 a {
-  color: #1E94F3;
+  color: inherit;
   text-decoration: underline;
 }
 
-h1 {
-  font-size: 3em;
-}
-h2 {
-  font-size: 2em;
-}
-
-/** fonts **/
-section, p {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-}
-section h1 {
-  font-weight: 900;
-}
-section h2,
-section h3 {
-  font-weight: 700;
-}
-
-section {
-  color: #1B294B;
-  background: #fff;
-}
 section header, section footer {
   font-size: 0.5em;
 }
@@ -40,79 +20,85 @@ section footer {
   text-align: right;
   right: 2em;
 }
+section header {
+  text-align: left;
+  left: 2em;
+}
+
+/** general **/
+kbd {
+  font-size: 0.75em;
+  line-height: 1em;
+  height: 1em;
+}
+
+code {
+  font-family: "Menlo", "PT Mono", "Andale Mono", "Droid Sans Mono", "Consolas", "Courier New";
+}
+
+/** Typography **/
+section {
+  font-family: "Source Sans Pro", sans-serif;
+}
+section h1 {
+  font-weight: 900;
+  font-size: 3em;
+}
+section h2 {
+  font-size: 2em;
+}
+section h2, section h3 {
+  font-weight: 700;
+}
+section p {
+  font-weight: 400;
+}
+
+section {
+  color: #1B294B;
+  background: #fff;
+}
+section header, section footer {
+  color: #8d94a5;
+}
 
 section.lead {
   background: #00bfff;
   color: #fff;
 }
-section.lead header,
-section.lead header a,
-section.lead footer,
-section.lead footer a {
+section.lead header, section.lead footer {
   color: #fff;
 }
-section.lead h1,
-section.lead h1 a {
+section.lead h1 {
   color: #fff;
 }
-section.lead h2,
-section.lead h2 a,
-section.lead h3,
-section.lead h3 a {
+section.lead h2, section.lead h3, section.lead h4, section.lead h5 {
   color: #ffe135;
 }
-
-section.lead h1,
-section.lead h2,
-section.lead h3,
-section.lead h4,
-section.lead h5,
-section.lead p {
+section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
   text-align: center;
 }
 
 section.invert {
+  background: #ffe135;
+}
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5 {
+  color: #fff;
+}
+
+section.chapter {
   background: rgb(25, 116, 210);
   color: #fff;
 }
-section.invert header,
-section.invert footer {
-  color: #fff;
+section.chapter code {
+  color: black;
 }
-section.invert h1,
-section.invert h1 a,
-section.invert h2,
-section.invert h2 a,
-section.invert h3,
-section.invert h3 a {
+section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5 {
   color: #FEE5F1;
 }
-
-section.invert blockquote, section.lead blockquote {
-  background: rgba(255,255,255,0.5);
-  color: #fff;
+section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5, section.chapter p {
+  text-align: center;
 }
-section.invert blockquote *, section.lead blockquote * {
-  text-align: left;
-}
-
-section.one {
-  background: #D6FAF9;
-}
-section.two {
-  background: rgb(250, 110, 121);
-}
-section.two h1,
-section.two h2,
-section.two h3,
-section.two h4,
-section.two h5,
-section.two p {
-  color: #fff;
-}
-section.three {
-  background: #ffe135;
-}
-section.three h2 {
+section.chapter header, section.chapter footer {
   color: #fff;
 }

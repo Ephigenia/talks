@@ -20,7 +20,7 @@ _footer: http://www.marceleichner.de
 
 
 ----
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## ⚒️ [nvm](https://github.com/nvm-sh/nvm)
 
 nvm is a version manager for node.js
@@ -42,7 +42,7 @@ nvm is a version manager for node.js
 
 
 ----
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## 🐕 [husky](https://www.npmjs.com/package/husky)
 
 "modern native git hooks made easy" – Easily setup local git commit hooks for the whole team.
@@ -103,7 +103,7 @@ git commit --no-verify -m "chore: my message"
 
 
 ----
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## ⬆️ [npm-check](https://www.npmjs.com/package/npm-check)
 
 "Check for outdated, incorrect, and unused dependencies." - Interactive way of updating npm packages
@@ -123,7 +123,7 @@ git commit --no-verify -m "chore: my message"
 
 
 ---
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## ↗️  [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
 "upgrades your package.json dependencies to the latest versions" - ignoring specified versions
@@ -139,7 +139,7 @@ git commit --no-verify -m "chore: my message"
 
 
 ----
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## 📦 [depcheck](https://www.npmjs.com/package/depcheck)
 
 Analyze dependencies in a project and find unused and useless dependencies.
@@ -174,7 +174,7 @@ ignores:
 
 
 ----
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## 🪣 [modclean](https://www.npmjs.com/package/modclean)
 "Remove unwanted files and directories from your node_modules folder"
 
@@ -193,7 +193,7 @@ Collection of different glob-patterns & filters to remove files from node_module
 
 
 ---
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ![height:300](https://res.cloudinary.com/practicaldev/image/fetch/s--asKSgsVB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/9i6bs4g6cx05jeagfhum.png)
 ## [npkill](https://www.npmjs.com/package/npkill)
 
@@ -206,7 +206,7 @@ Collection of different glob-patterns & filters to remove files from node_module
 
 
 ---
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 ## 📄 [license-checker-rseidelsohn](https://www.npmjs.com/package/license-checker-rseidelsohn)
 "Ever needed to see all the license info for a module and its dependencies?"
 
@@ -226,7 +226,7 @@ Collection of different glob-patterns & filters to remove files from node_module
 
 
 ---
-<!-- _class: invert lead -->
+<!-- _class: chapter -->
 # Others?
 
 - check packages in `package.json` files of projects that you’re using to find new inspiring helpful tools.
@@ -237,6 +237,6 @@ Collection of different glob-patterns & filters to remove files from node_module
 
 
 ---
-<!-- _class: three -->
+<!-- _class: invert -->
 # Thanks for listening!
 ![bg left 50%](./assets/ephigenia.de.png)

@@ -1,0 +1,89 @@
+/*!
+ * Marp / Marpit Egoditor theme.
+ *
+ * @theme egoditor
+ * @author Marcel Eichner <love@ephigenia.de>
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+@import-theme 'default';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+
+@import "lib/base";
+
+$primary: #1E94F3;
+$black: #1B294B;
+$background: #fff;
+
+$yellow: #ffe135;
+
+
+/** Typography **/
+section {
+  font-family: "Source Sans Pro", sans-serif;
+  h1 {
+    font-weight: 900;
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h2, h3 {
+    font-weight: 700;
+  }
+  p {
+    font-weight: 400;
+  }
+}
+
+section {
+  color: $black;
+  background: $background;
+  header, footer {
+    color: mix($background, $black);
+  }
+}
+
+section.lead {
+  background: #00bfff;
+  color: $background;
+  
+  header, footer {
+    color: $background;
+  }
+  h1 {
+    color: $background;
+  }
+  h2, h3, h4, h5 {
+    color: $yellow;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+}
+
+section.invert {
+  background: $yellow;
+  h1, h2, h3, h4, h5 {
+    color: $background;
+  }
+}
+
+section.chapter {
+  background: rgb(25, 116, 210);
+  color: $background;
+  code {
+    color: invert($background);
+  }
+  h1, h2, h3, h4, h5 {
+    color: #FEE5F1;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+  header, footer {
+    color: $background;
+  }
+}
