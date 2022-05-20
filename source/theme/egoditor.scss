@@ -14,6 +14,7 @@
 @import "lib/base";
 
 $primary: #1E94F3;
+$secondary: #FEE5F1;
 $black: #1B294B;
 $background: #fff;
 
@@ -25,7 +26,7 @@ section {
   font-family: "Source Sans Pro", sans-serif;
   h1 {
     font-weight: 900;
-    font-size: 3em;
+    font-size: 2.75em;
   }
   h2 {
     font-size: 2em;
@@ -47,7 +48,7 @@ section {
 }
 
 section.lead {
-  background: #00bfff;
+  background: $primary;
   color: $background;
   
   header, footer {
@@ -66,19 +67,19 @@ section.lead {
 
 section.invert {
   background: $yellow;
-  h1, h2, h3, h4, h5 {
-    color: $background;
+  h1, h2, h3, h4, h5, p {
+    color: #1B294B;
   }
 }
 
 section.chapter {
-  background: rgb(25, 116, 210);
-  color: $background;
+  background: $secondary;
+  color: rgb(27, 41, 75);
   code {
     color: invert($background);
   }
   h1, h2, h3, h4, h5 {
-    color: #FEE5F1;
+    color: rgb(27, 41, 75);
   }
   h1, h2, h3, h4, h5, p {
     text-align: center;

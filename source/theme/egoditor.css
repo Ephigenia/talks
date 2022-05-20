@@ -42,7 +42,7 @@ section {
 }
 section h1 {
   font-weight: 900;
-  font-size: 3em;
+  font-size: 2.75em;
 }
 section h2 {
   font-size: 2em;
@@ -63,7 +63,7 @@ section header, section footer {
 }
 
 section.lead {
-  background: #00bfff;
+  background: #1E94F3;
   color: #fff;
 }
 section.lead header, section.lead footer {
@@ -82,19 +82,19 @@ section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead
 section.invert {
   background: #ffe135;
 }
-section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5 {
-  color: #fff;
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5, section.invert p {
+  color: #1B294B;
 }
 
 section.chapter {
-  background: rgb(25, 116, 210);
-  color: #fff;
+  background: #FEE5F1;
+  color: rgb(27, 41, 75);
 }
 section.chapter code {
   color: black;
 }
 section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5 {
-  color: #FEE5F1;
+  color: rgb(27, 41, 75);
 }
 section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5, section.chapter p {
   text-align: center;

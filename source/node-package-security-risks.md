@@ -1,10 +1,10 @@
 ---
 title: Node Package Security Risks
-description: security related things with node package managers
+description: Security & Stability risks when working with node package manager(s).
 keywords: npm,security,package,manager,npm,npq,malicious,attack,vector,audit
 author: Marcel Eichner
 marp: true
-theme: marceleichner
+theme: egoditor
 _header: 2022-05-11
 _footer: http://www.marceleichner.de
 ---
@@ -199,6 +199,7 @@ Most important thing is to be aware of security-related topics and not ignoring 
     - [25 compromisde packages](https://thehackernews.com/2022/02/25-malicious-javascript-libraries.html), [discord packages](https://arstechnica.com/information-technology/2021/12/malicious-packages-sneaked-into-npm-repository-stole-discord-tokens/), [crypocurrency miner](https://app.renovatebot.com/package-diff?name=ua-parser-js&from=0.7.28&to=1.0.0), [Azure Developer Attack (jfrog)](https://jfrog.com/blog/large-scale-npm-attack-targets-azure-developers-with-malicious-packages/), [Malware Civil War (jfrog)](https://jfrog.com/blog/malware-civil-war-malicious-npm-packages-targeting-malware-authors/)
 
 ---
+<!-- _class: invert -->
 # Thanks for listening! 🐼
 Please give feedback & ask questions!
 ![bg left 50%](./assets/ephigenia.de.png)

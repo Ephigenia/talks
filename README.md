@@ -4,7 +4,8 @@ Collection of talks & presentations.
 
 ## 2022
 
-- [node package security risks](./source/node-package-security-risks.md)
+- [node package security risks](./source/node-package-security-risks.md
+     Security & Stability risks when working with node package manager(s).
 - [GitHub private npm registry](./source/gh-npm-registry.md)
      Introduction and how-to-use description of GitHub’s easy-to-use private package registry
 - [npm-tools](source/npm-tools.md)  
