@@ -6,7 +6,7 @@
  * @size 4:3 960px 720px
  * @size 16:9 1280px 720px
  */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap");
 @import-theme "default";
 a {
   color: inherit;
@@ -38,67 +38,80 @@ code {
 
 /** Typography **/
 section {
-  font-family: "ProximaNova ExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 section h1 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 2.75em;
 }
 section h2 {
-  font-size: 2em;
-}
-section h2, section h3 {
   font-weight: 700;
+  font-size: 1.75em;
 }
-section p {
-  font-weight: 400;
+section h3 {
+  font-size: 1.5em;
+}
+section kbd {
+  padding: 0.25rem 0.25rem;
 }
 
 section {
-  color: #1B294B;
+  color: #464C50;
   background: #fff;
 }
-section header, section footer {
-  color: #8d94a5;
+section kbd {
+  border: 1px solid #a3a6a8;
+}
+section h1, section h2, section h3 {
+  color: #EE6123;
 }
 
 section.lead {
   background: #EE6123;
   color: #fff;
 }
-section.lead header, section.lead footer {
-  color: #fff;
+section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
+  color: inherit;
 }
 section.lead h1 {
-  color: #fff;
-}
-section.lead h2, section.lead h3, section.lead h4, section.lead h5 {
   color: #fff;
 }
 section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
   text-align: center;
 }
-
-section.invert {
-  background: #0E3042;
-}
-section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5 {
-  color: #fff;
+section.lead code {
+  background: #f1814f;
 }
 
 section.chapter {
-  background: #EFF7FC;
-  color: #0E3042;
+  background: #61B3DE;
 }
-section.chapter code {
-  color: black;
-}
-section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5 {
-  color: #0E3042;
+section.chapter, section.chapter header, section.chapter footer, section.chapter code {
+  color: #fff;
 }
 section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5, section.chapter p {
   text-align: center;
 }
-section.chapter header, section.chapter footer {
+section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5 {
   color: #fff;
+}
+section.chapter code, section.chapter pre {
+  color: #fff;
+  background: #b0d9ef;
+  border-color: #eff7fc;
+}
+
+section.invert {
+  background: #0E3042;
+  color: #fff;
+}
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5, section.invert p {
+  text-align: center;
+}
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5 {
+  color: #EE6123;
+}
+section.invert code {
+  background: #3e5968;
 }

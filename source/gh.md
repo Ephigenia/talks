@@ -4,7 +4,7 @@ description:
 keywords: npm,tool,package,version
 author: Marcel Eichner
 marp: true
-theme: egoditor
+theme: marceleichner
 _header: 2022-03-30
 _footer: http://www.marceleichner.de
 ---

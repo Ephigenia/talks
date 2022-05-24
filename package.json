@@ -5,16 +5,17 @@
   "description": "MARP",
   "main": "index.js",
   "scripts": {
+    "build:css": "sass --no-source-map source/theme:source/theme",
+    "build:html": "npm run marp -- ./source/*.md",
+    "build:pdf": "npm run marp -- --pdf ./source/*.md",
+    "build": "npm run build:html && npm run build:pdf",
     "marp": "marp --html --theme-set ./source/theme --allow-local-files ",
-    "watch": "npm run build:html -- --watch",
     "preview": "npm run marp -- ./source/*.md --preview",
     "serve": "npm run marp -- ./source --server",
-    "build": "npm run build:html && npm run build:pdf",
-    "build:html": "npm run marp -- ./source/*.md",
-    "build:css": "sass --no-source-map source/theme:source/theme",
+    "start": "npm run -s start",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "sass --no-source-map --watch source/theme:source/theme",
-    "build:pdf": "npm run marp -- --pdf ./source/*.md",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npm run build:html -- --watch"
   },
   "repository": {
     "type": "git",

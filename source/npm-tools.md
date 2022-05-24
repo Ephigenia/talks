@@ -4,7 +4,7 @@ description: A short introduction to a collection of useful node packages for ev
 keywords: npm,tool,package,version
 author: Marcel Eichner
 marp: true
-theme: egoditor
+theme: marceleichner
 _header: 2022-03-16
 _footer: http://www.marceleichner.de
 ---
@@ -103,7 +103,7 @@ git commit --no-verify -m "chore: my message"
 
 
 ----
-<!-- _class: chapter -->
+<!-- _class: invert -->
 ## ⬆️ [npm-check](https://www.npmjs.com/package/npm-check)
 
 "Check for outdated, incorrect, and unused dependencies." - Interactive way of updating npm packages
@@ -113,7 +113,7 @@ git commit --no-verify -m "chore: my message"
 ### Why?
 
 - get an overview of the up-to-date "state" of dependencies
-- visually appealing, simple way of updating multiple packages
+- visually appealing, <kbd>F+STRG</kbd> simple way of updating multiple packages
 - see different types of updates: patch, minor, major
 - find extranous packages
 - find missing packages

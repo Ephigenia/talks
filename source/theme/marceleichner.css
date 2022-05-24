@@ -6,7 +6,6 @@
  * @size 4:3 960px 720px
  * @size 16:9 1280px 720px
  */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
 @import-theme "default";
 a {
   color: inherit;
@@ -53,13 +52,19 @@ section h2 {
 section p {
   font-weight: 400;
 }
+section kbd {
+  padding: 0.25rem 0.25rem;
+}
 
 section {
   color: #000;
   background: #fff;
 }
-section header, section footer {
-  color: gray;
+section kbd {
+  border: 1px solid gray;
+}
+section h1, section h2, section h3 {
+  color: #e2231a;
 }
 
 section.lead {
@@ -68,32 +73,42 @@ section.lead {
 section.lead h1 {
   border-bottom: 0.5rem solid #e2231a;
 }
-section.lead header, section.lead footer,
-section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
+section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
+  color: inherit;
+}
+section.lead h1 {
   color: #e2231a;
 }
 section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead h5, section.lead p {
   text-align: center;
 }
 
-section.invert {
-  color: #fff;
-  background: black;
-}
-section.invert header, section.invert footer {
-  color: gray;
-}
-section.invert h1 {
-  color: #00833d;
-}
-
 section.chapter {
   box-shadow: inset 0 0 0 0.25rem #00833d;
+  background: #fff;
+  color: #000;
 }
 section.chapter h1 {
   border-bottom: 0.25rem solid #00833d;
   color: #00833d;
 }
+section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4 {
+  color: #00833d;
+}
 section.chapter h1, section.chapter h2, section.chapter h3, section.chapter h4, section.chapter h5, section.chapter p {
   text-align: center;
+}
+
+section.invert {
+  color: white;
+  background: black;
+}
+section.invert h1 {
+  color: #00833d;
+}
+section.invert h1, section.invert h2, section.invert h3, section.invert h4, section.invert h5, section.invert p {
+  text-align: center;
+}
+section.invert code {
+  background: #333333;
 }

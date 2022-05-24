@@ -9,73 +9,99 @@
 
 @import-theme 'default';
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
-
 @import "lib/base";
 
-$primary: #e2231a;
-$secondary: #00833d;
-$black: #000;
+$text: #000;
 $background: #fff;
+$accent: #e2231a;
+
+$primary: $accent;
+$primaryText: #000;
+$primaryAccent: #e2231a;
+
+$secondary: #00833d;
+$secondaryAccent: $secondary;
+$secondaryText: #000;
+
+$tertiary: invert($background);
+$tertiaryText: invert($text);
+$tertiaryAccent: $secondary;
+
 
 /** Typography **/
 section {
-    font-family: "Helvetica Neue", "Helvetica", "Arial";
-    header, footer {
-        font-size: 0.5em;
-    }
-    h1 {
-        font-weight: 900;
-        font-size: 2.5em;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    p {
-        font-weight: 400;
-    }
+  font-family: "Helvetica Neue", "Helvetica", "Arial";
+  header, footer {
+    font-size: 0.5em;
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-weight: 400;
+  }
+  kbd {
+    padding: 0.25rem 0.25rem;
+  }
 }
 
 section {
-    color: $black;
-    background: $background;
-    header, footer {
-        color: mix($background, $black);
-    }
+  color: $text;
+  background: $background;
+  kbd {
+    border: 1px solid mix($text, $background);
+  }
+  h1, h2, h3 {
+    color: $accent;
+  }
 }
 
 section.lead {
-    box-shadow: inset 0 0 0 0.5rem $primary;
-    h1 {
-        border-bottom: 0.5rem solid$primary;
-    }
-    header, footer,
-    h1, h2, h3, h4, h5, p {
-        color: $primary;
-    }
-    h1, h2, h3, h4, h5, p {
-        text-align: center;
-    }
-}
-
-section.invert {
-    color: $background;
-    background: invert($background);
-    header, footer {
-        color: mix(invert($background), invert($black));
-    }
-    h1 {
-        color: $secondary;
-    }
+  box-shadow: inset 0 0 0 0.5rem $primaryAccent;
+  h1 {
+    border-bottom: 0.5rem solid $primaryAccent;
+  }
+  h2, h3, h4, h5, p {
+    color: inherit;
+  }
+  h1 {
+    color: $primaryAccent;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
 }
 
 section.chapter {
-    box-shadow: inset 0 0 0 0.25rem  $secondary;
-    h1 {
-        border-bottom: 0.25rem solid $secondary;
-        color: $secondary;
-    }
-    h1, h2, h3, h4, h5, p {
-        text-align: center;
-    }
+  box-shadow: inset 0 0 0 0.25rem  $secondaryAccent;
+  background: $background;
+  color: $secondaryText;
+  h1 {
+    border-bottom: 0.25rem solid $secondaryAccent;
+    color: $secondaryAccent;
+  }
+  h1, h2, h3, h4 {
+    color: $secondaryAccent;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+}
+
+section.invert {
+  color: $tertiaryText;
+  background: $tertiary;
+  h1 {
+    color: $tertiaryAccent;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+  code {
+    background: mix($tertiary, $tertiaryText, 80);
+  }
 }

@@ -4,7 +4,7 @@ description: Security & Stability risks when working with node package manager(s
 keywords: npm,security,package,manager,npm,npq,malicious,attack,vector,audit
 author: Marcel Eichner
 marp: true
-theme: egoditor
+theme: marceleichner
 _header: 2022-05-11
 _footer: http://www.marceleichner.de
 ---

@@ -7,83 +7,116 @@
  * @size 16:9 1280px 720px
  */
 
- @import-theme 'default';
+@import-theme 'default';
 
- @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
- 
- @import "lib/base";
- 
- $primary: #EE6123;
- $secondary: #EFF7FC;
- $black: #1B294B;
- $background: #fff;
- $invert: #0E3042;
- 
- 
- /** Typography **/
- section {
-   font-family: "ProximaNova ExtraBold","Helvetica Neue",Helvetica,Arial,sans-serif;
-   h1 {
-     font-weight: 900;
-     font-size: 2.75em;
-   }
-   h2 {
-     font-size: 2em;
-   }
-   h2, h3 {
-     font-weight: 700;
-   }
-   p {
-     font-weight: 400;
-   }
- }
- 
- section {
-   color: $black;
-   background: $background;
-   header, footer {
-     color: mix($background, $black);
-   }
- }
- 
- section.lead {
-   background: $primary;
-   color: $background;
-   
-   header, footer {
-     color: $background;
-   }
-   h1 {
-     color: $background;
-   }
-   h2, h3, h4, h5 {
-     color: $background;
-   }
-   h1, h2, h3, h4, h5, p {
-     text-align: center;
-   }
- }
- 
- section.invert {
-   background: $invert;
-   h1, h2, h3, h4, h5 {
-     color: $background;
-   }
- }
- 
- section.chapter {
-   background: $secondary;
-   color: #0E3042;
-   code {
-     color: invert($background);
-   }
-   h1, h2, h3, h4, h5 {
-     color: #0E3042;
-   }
-   h1, h2, h3, h4, h5, p {
-     text-align: center;
-   }
-   header, footer {
-     color: $background;
-   }
- }
+@import "lib/base";
+
+// brand colors
+$bitly-orange:      #EE6123;
+$bitly-navy:        #0E3042;
+$bitly-blue:        #61B3DE;
+$bitly-blue-light:  #EFF7FC;
+$bitly-black:       #464C50;
+$bitly-white:       #fff;
+$bitly-grey-dark:   #8F989D;
+$bitly-grey-light:  #DDE0E2;
+
+// theme colors
+$primary: $bitly-orange;
+$primaryText: $bitly-white;
+$primaryAccent: $bitly-white;
+
+$secondary: $bitly-blue;
+$secondaryAccent: $bitly-white;
+$secondaryText: $bitly-white;
+
+$tertiary: $bitly-navy;
+$tertiaryAccent: $bitly-orange;
+$tertiaryText: $bitly-white;
+
+$accent: $bitly-orange;
+$text: $bitly-black;
+$background: $bitly-white;
+
+// using montserrat font from google fonts instead of Proxima Nova from Adobe
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
+/** Typography **/
+section {
+  font-family: "Montserrat", "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  h1 {
+    font-weight: 800;
+    font-size: 2.75em;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  kbd {
+    padding: 0.25rem 0.25rem;
+  }
+}
+
+section {
+  color: $text;
+  background: $background;
+  kbd {
+    border: 1px solid mix($text, $background);
+  }
+  h1, h2, h3 {
+    color: $accent;
+  }
+}
+
+section.lead {
+  background: $primary;
+  color: $primaryText;
+  h2, h3, h4, h5, p {
+    color: inherit;
+  }
+  h1 {
+    color: $primaryAccent;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+  code {
+    background: mix($primary, $primaryText, 80);
+  }
+}
+
+section.chapter {
+  background: $secondary;
+  &, header, footer, code {
+    color: $secondaryText;
+  }
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+  h1, h2, h3, h4, h5 {
+    color: $secondaryAccent;
+  }
+  code, pre {
+    color: $secondaryText;
+    background: mix($secondary, $secondaryText, 50);
+    border-color: mix($secondary, $secondaryText, 10);
+  }
+}
+
+section.invert {
+  background: $tertiary;
+  color: $tertiaryText;
+  h1, h2, h3, h4, h5, p {
+    text-align: center;
+  }
+  h1, h2, h3, h4, h5 {
+    color: $tertiaryAccent;
+  }
+  code {
+    background: mix($tertiary, $tertiaryText, 80);
+  }
+}
