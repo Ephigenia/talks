@@ -4,7 +4,7 @@ Collection of talks & presentations.
 
 ## 2022
 
-- [node package security risks](./source/node-package-security-risks.md
+- [node package security risks](./source/node-package-security-risks.md)
      Security & Stability risks when working with node package manager(s).
 - [GitHub private npm registry](./source/gh-npm-registry.md)
      Introduction and how-to-use description of GitHub’s easy-to-use private package registry
@@ -21,8 +21,3 @@ Collection of talks & presentations.
 - [MARP](https://marpit.marp.app/) slide generator using [Marpit](https://marpit.marp.app)
 - [termalizer](https://github.com/faressoft/terminalizer) Record your terminal and generate animated gif images or share a web player
 - [keycastr](https://github.com/keycastr/keycastr) - open-source keystroke visualizer
-
-# Themes
-
-- https://draculatheme.com/marp
-- https://github.com/TonioGela/marp

@@ -2,16 +2,16 @@ Collection of themes used for the presentations. They are compatible with [MARP]
 
 ## Themes
 
-There are some additional themes that extend the default marpit classes "lead", "invert" to even get more structure in a presentation following the terminology of a book where you have chapters, sections and subsections.
+There are some additional themes that extend the default Marpit classes "lead", "invert" to even get more structure in a presentation following the terminology of a book where you have chapters, sections and subsections.
 
-- marceleichner.css
-    - lead (marpit default)
-    - invert (marpit default)
-    - chapter
-    - section
+All custom themes support the following classes:
 
-- egoditor.css
-    - lead (marpit default)
-    - invert (marpit default)
-    - chapter
-    - section
+- lead (default)
+- invert (default)
+- chapter
+- section
+
+# Themes in the wild
+
+- https://draculatheme.com/marp
+- https://github.com/TonioGela/marp
