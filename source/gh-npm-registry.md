@@ -1,6 +1,6 @@
 ---
 title: gh npm registry
-description: 
+description: Introduction and how-to-use description of GitHub’s easy-to-use private package registry
 keywords: npm,tool,package,version,package,registry
 author: Marcel Eichner
 marp: true
