@@ -4,7 +4,7 @@ description: tmux is an open-source terminal multiplexer for Unix-like operating
 keywords: terminal,shell,tool,posix,bash,multiplexer,log,pane,window,sesssion,cheat-sheet,shortcuts
 author: Marcel Eichner
 marp: true
-theme: marceleichner
+theme: egoditor
 _header: 2022-04-03
 _footer: http://www.marceleichner.de
 ---

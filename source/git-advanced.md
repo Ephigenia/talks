@@ -14,8 +14,11 @@ _footer: http://www.marceleichner.de
 	- git log tree
 	- squash merge
 	- rewrite history
+	- squash
 	- git add -p 
 	- tuis (lazygit, gitui, tig)
+
+https://www.git-tower.com/blog/working-with-feature-branches/
 	- >
 
 <!-- _class: lead -->
