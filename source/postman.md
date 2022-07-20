@@ -1,6 +1,6 @@
 ---
 title: Postmam
-description: Introduction
+description: Introduction to Postman platform
 keywords: post,get,request,software,tool,REST,GraphQL,API,testing,automation,cli,newman,parameters,variables,environments,monitoring
 author: Marcel Eichner
 marp: true
