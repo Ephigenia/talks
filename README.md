@@ -4,13 +4,13 @@ Collection of talks & presentations.
 
 ## 2022
 
-- [postman](./source/postman.md) ([PDF](./source/postman.md), [HTML](./source/postman.html))  
+- [postman](./source/postman.md) ([PDF](./source/postman.pdf), [HTML](./source/postman.html))  
     Introduction to Postman platform
 - [node package security risks](./source/node-package-security-risks.md) ([PDF](./source/node-package-security-risks.pdf), [HTML](./source/node-package-security-risks.html))  
      Security & Stability risks when working with node package manager(s).
-- [GitHub private npm registry](./source/gh-npm-registry.md) ([PDF](./source/gh-npm-registry.md), [HTML](./source/gh-npm-registry.html))  
+- [GitHub private npm registry](./source/gh-npm-registry.md) ([PDF](./source/gh-npm-registry.pdf), [HTML](./source/gh-npm-registry.html))  
      Introduction and how-to-use description of GitHub’s easy-to-use private package registry
-- [npm-tools](source/npm-tools.md) ([PDF](source/npm-tools.md), [HTML](source/npm-tools.html))   
+- [npm-tools](source/npm-tools.md) ([PDF](source/npm-tools.pdf), [HTML](source/npm-tools.html))   
      A short introduction to a collection of useful node packages for everyday use
 
 ## before 2022
