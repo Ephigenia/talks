@@ -1,13 +1,12 @@
-Collection of talks & presentations.
+Collection of talks & presentations powered by [marpit](https://marpit.marp.app/markdown) using custom themes.
 
 # Talks
 
 ## 2022
 
-- [postman](./source/postman.md) ([PDF](./source/postman.pdf), [HTML](./source/postman.html))  
-    Introduction to Postman platform
+- [postman](./source/postman.md) ([PDF](./source/postman.pdf), [HTML](./source/postman.html)) Introduction to the Postman platform
 - [node package security risks](./source/node-package-security-risks.md) ([PDF](./source/node-package-security-risks.pdf), [HTML](./source/node-package-security-risks.html))  
-     Security & Stability risks when working with node package manager(s).
+     Security & Stability risks when working with a node package manager(s).
 - [GitHub private npm registry](./source/gh-npm-registry.md) ([PDF](./source/gh-npm-registry.pdf), [HTML](./source/gh-npm-registry.html))  
      Introduction and how-to-use description of GitHub’s easy-to-use private package registry
 - [npm-tools](source/npm-tools.md) ([PDF](source/npm-tools.pdf), [HTML](source/npm-tools.html))   
@@ -23,3 +22,7 @@ Collection of talks & presentations.
 - [MARP](https://marpit.marp.app/) slide generator using [Marpit](https://marpit.marp.app)
 - [termalizer](https://github.com/faressoft/terminalizer) Record your terminal and generate animated gif images or share a web player
 - [keycastr](https://github.com/keycastr/keycastr) - open-source keystroke visualizer
+
+## How to run
+
+    npm run serve && open http://localhost:8080

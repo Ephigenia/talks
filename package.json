@@ -6,13 +6,13 @@
   "main": "index.js",
   "scripts": {
     "build:css": "sass --no-source-map source/theme:source/theme",
-    "build:html": "npm run marp -- ./source/*.md",
-    "build:pdf": "npm run marp -- --pdf ./source/*.md",
+    "build:html": "npm run marp -- source/{.*,*}.md",
+    "build:pdf": "npm run marp -- --pdf source/{.*,*}.md",
     "build": "npm run build:html && npm run build:pdf",
     "marp": "marp --html --theme-set ./source/theme --allow-local-files ",
-    "preview": "npm run marp -- ./source/*.md --preview",
+    "preview": "npm run marp -- source/{.*,*}.md --preview",
     "serve": "npm run marp -- ./source --server",
-    "start": "npm run -s start",
+    "start": "npm run -s serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "sass --no-source-map --watch source/theme:source/theme",
     "watch": "npm run build:html -- --watch"
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Ephigenia/talks#readme",
   "devDependencies": {
-    "@marp-team/marp-cli": "1.7.0",
-    "sass": "1.51.0"
+    "@marp-team/marp-cli": "2.2.2",
+    "sass": "1.56.1"
   }
 }

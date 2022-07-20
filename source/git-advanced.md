@@ -12,6 +12,7 @@ _footer: http://www.marceleichner.de
 <!-- 
 - stash
 	- git log tree
+	- git log master..branch 
 	- squash merge
 	- rewrite history
 	- squash
@@ -25,3 +26,4 @@ https://www.git-tower.com/blog/working-with-feature-branches/
 # Advanced Git
 
 ## lorem ipsum dolor
+

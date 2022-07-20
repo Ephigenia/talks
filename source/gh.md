@@ -26,7 +26,16 @@ https://cli.github.com/manual/gh_extension
 extensions
 
     gh actions-status cli
-  
+
+show running actions
+
+    gh run view
+
+    gh run watch
+
+iterate
+
+    gh repo list Egoditor --json name -q ".[] .name" | xargs -n1 -I $ sh -c "echo '# repo: $'; gh secret list --repo Egoditor\/$"
 >
 
 <!-- _class: lead -->
@@ -55,8 +64,9 @@ gh pr checkout <number>
 # Resources
 
 - https://github.blog/2021-03-11-scripting-with-github-cli/
+- [Awesome GitHub CLI Extensions](https://github.com/kodepandai/awesome-gh-cli-extensions)
 
 ---
 <!-- _class: three -->
 # Thanks for listening!
-![bg left 50%](./assets/ephigenia.de.png)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs)

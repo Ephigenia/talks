@@ -215,4 +215,4 @@ Authentification worked well but the package could not be found as the scope is 
 ---
 <!-- _class: three -->
 # Thanks for listening!
-![bg left 50%](./assets/ephigenia.de.png)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs)

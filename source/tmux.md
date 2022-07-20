@@ -14,8 +14,9 @@ _footer: http://www.marceleichner.de
 
 ## terminal multiplexer
 
-"It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal" https://github.com/tmux/tmux/wiki
+"It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal" https://github.com/tmux/tmux/wiki 
 
+![qrcode width:150px height:150px](https://public-api.egodit.org/v1/create/free?qr_code_text=https://github.com/tmux/tmux/wiki)
 
 ---
 <!-- _class: invert lead -->
@@ -30,7 +31,6 @@ _footer: http://www.marceleichner.de
 - 1-n Session(s)
     - 1-n Windows
         - 1-n Panes
-
 
 ---
 # The Prefix Key
@@ -77,6 +77,7 @@ _footer: http://www.marceleichner.de
 - <kbd>z</kbd>  zoom pane
 - <kbd>q</kbd>  show pane numbers
 - <kbd>SPACE</kbd>  toggle between layouts
+- <kbd>CTRL+o</kbd>  rotate panes
 - <kbd>x</kbd>  kill pane
 - <kbd>LEFT</kbd>, <kbd>RIGHT</kbd>, <kbd>UP</kbd>, <kbd>DOWN</kbd>  switch focus to pane
 
@@ -116,4 +117,4 @@ tbd example
 ---
 <!-- _class: three -->
 # Thanks for listening!
-![bg left 50%](./assets/ephigenia.de.png)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs)

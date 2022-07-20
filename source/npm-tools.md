@@ -239,4 +239,4 @@ Collection of different glob-patterns & filters to remove files from node_module
 ---
 <!-- _class: invert -->
 # Thanks for listening!
-![bg left 50%](./assets/ephigenia.de.png)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs&background_color=%23000000&foreground_color=%23ffffff)

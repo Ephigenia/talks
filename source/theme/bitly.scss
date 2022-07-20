@@ -85,7 +85,7 @@ section.lead {
     text-align: center;
   }
   code {
-    background: mix($primary, $primaryText, 80);
+    background: mix($primary, $primaryText, 80%);
   }
 }
 
@@ -102,8 +102,8 @@ section.chapter {
   }
   code, pre {
     color: $secondaryText;
-    background: mix($secondary, $secondaryText, 50);
-    border-color: mix($secondary, $secondaryText, 10);
+    background: mix($secondary, $secondaryText, 50%);
+    border-color: mix($secondary, $secondaryText, 10%);
   }
 }
 
@@ -117,6 +117,6 @@ section.invert {
     color: $tertiaryAccent;
   }
   code {
-    background: mix($tertiary, $tertiaryText, 80);
+    background: mix($tertiary, $tertiaryText, 80%);
   }
 }

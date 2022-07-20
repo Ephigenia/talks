@@ -24,6 +24,9 @@ section header {
   text-align: left;
   left: 2em;
 }
+section h1 > img, section h2 > img, section h3 > img, section h4 > img, section h5 > img, section h6 > img {
+  vertical-align: text-bottom;
+}
 
 /** general **/
 kbd {

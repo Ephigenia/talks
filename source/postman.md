@@ -14,6 +14,8 @@ _footer: http://www.marceleichner.de / https://www.qr-code-generator.com/
 
 > Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration."
 
+![qrcode width:150px height:150px](https://public-api.egodit.org/v1/create/free?qr_code_text=http://postman.com)
+
 ---
 ## Features
 
@@ -166,4 +168,4 @@ Try It! It’s free: http://postman.com
 ---
 <!-- _class: invert -->
 # Thanks for listening!
-![bg left 50%](./assets/ephigenia.de.png)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs&background_color=%230E3042&foreground_color=%23ffffff)
