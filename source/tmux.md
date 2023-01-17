@@ -4,7 +4,7 @@ description: tmux is an open-source terminal multiplexer for Unix-like operating
 keywords: terminal,shell,tool,posix,bash,multiplexer,log,pane,window,sesssion,cheat-sheet,shortcuts
 author: Marcel Eichner
 marp: true
-theme: egoditor
+theme: bitly
 _header: 2022-04-03
 _footer: http://www.marceleichner.de
 ---
@@ -14,9 +14,9 @@ _footer: http://www.marceleichner.de
 
 ## terminal multiplexer
 
-"It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal" https://github.com/tmux/tmux/wiki 
+<q>It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal</q> – https://github.com/tmux/tmux/wiki 
 
-![qrcode width:150px height:150px](https://public-api.egodit.org/v1/create/free?qr_code_text=https://github.com/tmux/tmux/wiki)
+![qrcode width:150px height:150px](https://public-api.egodit.org/v1/create/free?qr_code_text=https://github.com/tmux/tmux)
 
 ---
 <!-- _class: invert lead -->
@@ -32,15 +32,6 @@ _footer: http://www.marceleichner.de
     - 1-n Windows
         - 1-n Panes
 
----
-# The Prefix Key
-
-## <kbd>CTRL</kbd> + <kbd>b</kbd>
-
----
-# Noticable Shortcuts
-
-- <kbd>t</kbd> show clock
 
 ---
 # Install
@@ -57,6 +48,11 @@ _footer: http://www.marceleichner.de
     ```
     sudo yum install tmux
     ```
+
+---
+# The Prefix Key
+
+## <kbd>CTRL</kbd> + <kbd>b</kbd>
 
 ---
 ## Windows
@@ -81,33 +77,17 @@ _footer: http://www.marceleichner.de
 - <kbd>x</kbd>  kill pane
 - <kbd>LEFT</kbd>, <kbd>RIGHT</kbd>, <kbd>UP</kbd>, <kbd>DOWN</kbd>  switch focus to pane
 
-<!-- show demo -->
+---
+# Noticable Shortcuts
+
+- <kbd>t</kbd> show clock
 
 ---
-# Customize
+# Demo
 
----
-## Status Bar
-
-
----
-# Plugins
-
----
-## Tmux Plugin Manager (TPM)
-
----
-## Tmuxinator
-
-> Manage complex tmux sessions easily
-
----
-## Configuration
-
-tbd example
-
-<!-- show demo -->
-
+- showcase start, exit tmux
+- show panes, windows, sessions
+- show navigation between panes, windows, sessions
 
 ---
 # Additional Resources
@@ -115,6 +95,6 @@ tbd example
 - [Tmux Beginner’s Guide & Cheat Sheet - Hostinger Tutorials](https://www.hostinger.com/tutorials/tmux-beginners-guide-and-cheat-sheet/)
 
 ---
-<!-- _class: three -->
+<!-- _class: invert -->
 # Thanks for listening!
 ![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs)

@@ -4,15 +4,16 @@ description:
 keywords: git,tools,tui,stash,squash,commit,history
 author: Marcel Eichner
 marp: true
-theme: marceleichner
-_header: 2022-05-24
-_footer: http://www.marceleichner.de
+theme: bitly
+_header: 2023-01-17
+_footer: http://www.marceleichner.de / https://www.qr-code-generator.com/
 ---
 
 <!-- 
 - stash
 	- git log tree
 	- git log master..branch 
+	- git blame
 	- squash merge
 	- rewrite history
 	- squash
@@ -26,4 +27,3 @@ https://www.git-tower.com/blog/working-with-feature-branches/
 # Advanced Git
 
 ## lorem ipsum dolor
-
