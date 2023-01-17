@@ -64,7 +64,16 @@
 extensions
 
     gh actions-status cli
-  
+
+show running actions
+
+    gh run view
+
+    gh run watch
+
+iterate
+
+    gh repo list Egoditor --json name -q &quot;.[] .name&quot; | xargs -n1 -I $ sh -c &quot;echo '# repo: $'; gh secret list --repo Egoditor\/$&quot;
 &gt;
 
 &lt;!-- _class: lead</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@2.2.2/lib/bespoke.js.LICENSE.txt */
