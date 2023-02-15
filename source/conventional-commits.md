@@ -24,7 +24,8 @@ _footer: http://www.marceleichner.de / https://www.qr-code-generator.com/
 ---
 # Requirements
 
-- determine next version [semver](https://semver.org) bump
+- communicating the nature of changes to teammates, the public, and other stakeholders
+- determine next semantic version [semver](https://semver.org) bump
 - automate things
   - CHANGELOG (think `git log --online HEAD..last-release`)
   - trigger a release, deployment
@@ -89,6 +90,7 @@ Most common ones:
 - revert: reverted commits
 
 ---
+<!-- _class: chapter -->
 # Type: Semver Bump
 
 The types of messages that would trigger a semver bump
@@ -98,8 +100,8 @@ The types of messages that would trigger a semver bump
 - `BREAKING CHANGE`/`!`: major-release: `x.0.0`
 
 ---
-# Example 1
-
+# Excercise
+<!-- _class: invert -->
 ```
 fc489bb fix(scan-processing): check forbidden code before method check
 40b2ec4 chore: wip
@@ -114,9 +116,7 @@ b460697 feat: add ScanEnhancer in replacement for nest js service
 
 What would be the type of the next release?
 
-*A)* PATCH
-*B)* FEAT
-*C)* BREAKING (X.n.n)
+**A)** PATCH  **B)** FEAT  **C)** BREAKING
     
 ---
 <!-- _class: chapter -->
@@ -181,7 +181,7 @@ git log --format="%h %s %(trailers:key=Refs,valueonly)"
 
 
 --- 
-# More To Read
+# More To Read & Learn
 <!-- _class: chapter -->
 
 - [Conventional Commits Guidelines](https://www.conventionalcommits.org/)

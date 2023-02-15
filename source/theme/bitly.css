@@ -95,7 +95,7 @@ section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead
 section.lead code {
   background: #f1814f;
 }
-section.lead footer {
+section.lead footer, section.lead header {
   color: #fff;
 }
 
