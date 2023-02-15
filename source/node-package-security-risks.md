@@ -202,4 +202,4 @@ Most important thing is to be aware of security-related topics and not ignoring 
 <!-- _class: invert -->
 # Thanks for listening! 🐼
 Please give feedback & ask questions!
-![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=http://qrco.de/bdWDGs&background_color=%23000000&foreground_color=%23ffffff)
+![bg left 50%](https://public-api.egodit.org/v1/create/free?qr_code_text=https://qrco.de/bdWDGs)

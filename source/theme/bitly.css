@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Marp / Marpit bitly theme.
  *
@@ -37,6 +38,14 @@ kbd {
 
 code {
   font-family: "Menlo", "PT Mono", "Andale Mono", "Droid Sans Mono", "Consolas", "Courier New";
+}
+
+q::before {
+  content: "“";
+}
+
+q::after {
+  content: "”";
 }
 
 /** Typography **/
@@ -85,6 +94,9 @@ section.lead h1, section.lead h2, section.lead h3, section.lead h4, section.lead
 }
 section.lead code {
   background: #f1814f;
+}
+section.lead footer {
+  color: #fff;
 }
 
 section.chapter {

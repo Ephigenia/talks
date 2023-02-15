@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Marp / Marpit marceleichner theme.
  *
@@ -36,6 +37,14 @@ kbd {
 
 code {
   font-family: "Menlo", "PT Mono", "Andale Mono", "Droid Sans Mono", "Consolas", "Courier New";
+}
+
+q::before {
+  content: "“";
+}
+
+q::after {
+  content: "”";
 }
 
 /** Typography **/

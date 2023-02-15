@@ -87,6 +87,9 @@ section.lead {
   code {
     background: mix($primary, $primaryText, 80%);
   }
+  footer {
+    color: $primaryText;
+  }
 }
 
 section.chapter {
