@@ -2,8 +2,8 @@ Collection of talks & presentations powered by [marpit](https://marpit.marp.app/
 
 # Talks
 
-## 2022
 
+- [conventional-commits](./source/conventional-commits.md) ([PDF](./source/conventional-commits.pdf), [HTML](./source/conventional-commits.html)) Introduction to conventional commits. Where the format is coming from, what it is about and why it’s so great!
 - [postman](./source/postman.md) ([PDF](./source/postman.pdf), [HTML](./source/postman.html)) Introduction to the Postman platform
 - [node package security risks](./source/node-package-security-risks.md) ([PDF](./source/node-package-security-risks.pdf), [HTML](./source/node-package-security-risks.html))  
      Security & Stability risks when working with a node package manager(s).
