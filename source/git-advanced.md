@@ -1,6 +1,6 @@
 ---
 title: Advanced Git
-description: 
+description: first part of a collection of helpful git commands that we use almost every day
 keywords: git,tools,tui,stash,squash,commit,history
 author: Marcel Eichner
 marp: true
