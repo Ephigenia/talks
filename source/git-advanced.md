@@ -113,7 +113,8 @@ Rewriting history will change the structure of the git tree, change git hashes. 
 Reduce the changes of a branch to a single commit using [--squash](https://www.git-tower.com/learn/git/faq/git-squash)
 
 ```
-git co -b feat/my-new-branch-name
+git branch feat/my-new-branch-name
+git checkout feat/my-new-branch-name
 git merge --squash my-source-branch
 git commit -a "new commit message"
 ```
