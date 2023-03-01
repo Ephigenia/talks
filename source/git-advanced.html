@@ -91,7 +91,8 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="bitly" style="--theme:bitly;">
 <h1>Squash Branch</h1>
 <p>Reduce the changes of a branch to a single commit using <a href="https://www.git-tower.com/learn/git/faq/git-squash">--squash</a></p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>git co -b feat/my-new-branch-name
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>git branch feat/my-new-branch-name
+git checkout feat/my-new-branch-name
 git merge --squash my-source-branch
 git commit -a &quot;new commit message&quot;
 </code></pre>
