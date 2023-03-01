@@ -6,17 +6,17 @@ author: Marcel Eichner
 marp: true
 theme: bitly
 _header: 2023-03-01
-_footer: http://www.marceleichner.de / https://www.qr-code-generator.com/
+_footer: http://www.marceleichner.de / https://www.qr-code-generator.com
 ---
 
 <!-- _class: lead -->
-# Advanced Git (Part 1)
+# Advanced Git (Part 1) ![git logo w:100px](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Git-logo-2007.svg/240px-Git-logo-2007.svg.png)
 
 A practical guide for every-day git commands.
 
 ---
 <!-- _class: chapter -->
-# Configuration
+# Configuration ⚙️
 
 Git offers a wide range of configuration options. This chapter will be about the configuration options relevant for this talk.
 
@@ -37,7 +37,7 @@ git config --global core.editor nano
 
 ---
 <!-- _class: chapter -->
-# Cleaning Up
+# Cleaning Up 🧹
 
 ---
 # Typos in last commit message 🖊️
@@ -80,7 +80,7 @@ git stash
 
 You can have multiple stashes, re-apply, diff and clean them up.
 
-Read more about [stash](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+Learn more about [stash](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
 
 ---
 # Partial Commits
@@ -97,12 +97,15 @@ The most common cases you would use `y` for yes and `n` for no. Sometimes the hu
 
 ---
 <!-- _class: chapter -->
-# Rewriting History
+# Rewriting History 🏺
+Things helping to have a more clean git history (at least public).
 
 ---
 # Caution! ⚠️
 
 Rewriting history will change the structure of the git tree, change git hashes. Be careful when your changes are already pushed to a remote used by other developers.
+
+**DO NOT DO THIS on main/master branches**
 
 ---
 # Squash Branch
@@ -137,7 +140,7 @@ This opens up the `$EDITOR`:
 
 ---
 <!-- _class: chapter -->
-# Outlook
+# Outlook 👀
 
 - How to solve common problems / errors
 - How to clean git history from secrets
